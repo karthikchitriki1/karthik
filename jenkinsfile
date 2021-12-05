@@ -1,0 +1,9 @@
+node {
+   stage 'fetch code from github'
+'https://github.com/karthikchitriki1/karthik.git'
+stage 'install and start apache'
+      sh 'sudo apt-get install apache2 -y'
+      sh 'sudo service apache2 start
+stage 'deploy code'
+      sh 'sudo cp-R */var/www/html/'
+}
